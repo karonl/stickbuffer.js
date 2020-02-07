@@ -1,0 +1,11 @@
+{
+  "name": "stickbuffer",
+  "version": "1.0.0",
+  "description": "Efficient handling of sticky packets for Node.Js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "karonl",
+  "license": "ISC"
+}
