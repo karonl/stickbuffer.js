@@ -1,6 +1,5 @@
-'use strict'
-const TestReadable = require('./test_readable');
-const StickBuffer = require('./stick_buffer');
+const TestReadable = require('../lib/test_readable');
+const StickBuffer = require('../lib/stick_buffer');
 
 /**
  * 模拟网络只读流
