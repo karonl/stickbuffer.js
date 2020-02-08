@@ -1,9 +1,10 @@
 const TestReadable = require('../lib/test_readable');
 const StickBuffer = require('../lib/stick_buffer');
-
 /**
  * 模拟网络只读流
  * 生成随机长度的 chunk 发送给监听器
+ * 注：StickBuffer 把数据缓冲留在了系统层，避免读取过多字节在 JS 层
+ * 而无法迅速处理，在处理完当前数据后再向系统数据流读取字节数据。
  */
 const fileReadable = new TestReadable();
 const sb = new StickBuffer();
@@ -18,4 +19,4 @@ console.time('spent');
 fileReadable.on('readable', sb.emitReadable());
 fileReadable.on('end', () => {
   console.timeEnd('spent')
-})
+});

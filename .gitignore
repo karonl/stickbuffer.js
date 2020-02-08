@@ -1,3 +1,4 @@
 .DS_Store
 node_modules
 /send_binary.txt
+/examples/send_binary.txt
