@@ -6,13 +6,14 @@ const StickBuffer = require('../lib/stick_buffer');
  * 注：StickBuffer 把数据缓冲留在了系统层，避免读取过多字节在 JS 层
  * 而无法迅速处理，在处理完当前数据后再向系统数据流读取字节数据。
  */
+
 const fileReadable = new TestReadable();
 const sb = new StickBuffer();
 sb.setSocket(fileReadable);
 
 sb.on('data', chunk => {
-  let text = Buffer.from(chunk).toString();
-  console.log(text);
+  // let text = Buffer.from(chunk).toString();
+  // console.log(text);
 })
 
 console.time('spent');
