@@ -4,11 +4,16 @@
   "description": "Efficient handling of sticky packets for Node.Js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "mocha": "mocha",
+    "test": "nyc --reporter=text --reporter=lcov npm run mocha",
+    "cov": "nyc npm run mocha --exit"
   },
   "author": "karonl",
   "license": "ISC",
   "devDependencies": {
     "mocha": "^7.0.1"
+  },
+  "dependencies": {
+    "nyc": "^15.0.0"
   }
 }
