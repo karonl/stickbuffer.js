@@ -1,3 +1,4 @@
+'use strict'
 const TestReadable = require('../lib/test_readable');
 const StickBuffer = require('../lib/stick_buffer');
 /**
@@ -16,8 +17,8 @@ sb.on('data', chunk => {
   // console.log(text);
 })
 
-console.time('spent');
+console.time('consume spent');
 fileReadable.on('readable', sb.emitReadable());
 fileReadable.on('end', () => {
-  console.timeEnd('spent')
+  console.timeEnd('consume spent')
 });
